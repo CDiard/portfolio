@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -8,20 +7,14 @@ module.exports = {
     entry: './src/index.js',
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
+            template: './src/index.html'
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/views', to: 'views' },
-            ],
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash].css'
-        }),
-        new webpack.ProvidePlugin({
-            _: 'lodash',
-        }),
+                { from: 'src/assets/images', to: 'images', noErrorOnMissing: true },
+                { from: 'src/assets/fonts', to: 'fonts', noErrorOnMissing: true }
+            ]
+        })
     ],
     output: {
         filename: '[name].[contenthash].js',
@@ -46,20 +39,29 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                type: 'asset/resource'
-            },
-            {
                 test: /\.html$/i,
-                loader: "html-loader",
+                loader: 'html-loader',
                 options: {
-                    sources: false,
                     minimize: true,
                 },
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
             }
         ]
     },

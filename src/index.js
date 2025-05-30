@@ -1,8 +1,5 @@
-import './styles/main.css';
-import {router, setupLinks} from "./router";
+import './assets/styles/main.css';
+import './router';
 
-
-document.addEventListener('DOMContentLoaded', async () => {
-    setupLinks();
-    await router();
-});
+import './components/header/header.js';
+import './components/footer/footer.js';

@@ -1,36 +1,25 @@
-import HomeController from './controllers/HomeController';
-import AboutController from './controllers/AboutController';
-
 const routes = {
-    '/': {
-        view: 'home',
-        controller: HomeController
-    },
-    '/about': {
-        view: 'about',
-        controller: AboutController
-    },
+    '/': () => import('./components/home/home.js')
 };
 
-export async function navigateTo(url) {
-    history.pushState(null, null, url);
-    await router();
-}
-
-export async function router() {
-    const path = window.location.pathname;
+function loadRoute(path) {
     const route = routes[path] || routes['/'];
-    document.getElementById('app').innerHTML = route.view;
-    route.controller.init();
+    route().then(module => {
+        document.getElementById('app').innerHTML = '';
+        document.getElementById('app').appendChild(module.default());
+    });
 }
 
-export function setupLinks() {
+window.addEventListener('popstate', () => loadRoute(location.pathname));
+
+document.addEventListener('DOMContentLoaded', () => {
     document.body.addEventListener('click', e => {
         if (e.target.matches('[data-link]')) {
             e.preventDefault();
-            navigateTo(e.target.href);
+            history.pushState(null, '', e.target.href);
+            loadRoute(location.pathname);
         }
     });
 
-    window.addEventListener('popstate', router);
-}
+    loadRoute(location.pathname);
+});
