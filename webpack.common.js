@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -12,7 +11,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'src/assets/images', to: 'images', noErrorOnMissing: true },
-                { from: 'src/assets/fonts', to: 'fonts', noErrorOnMissing: true }
+                { from: 'src/assets/fonts', to: 'fonts', noErrorOnMissing: true },
+                { from: 'src/assets/pdf', to: 'pdf', noErrorOnMissing: true }
             ]
         })
     ],
@@ -62,6 +62,14 @@ module.exports = {
                 generator: {
                     filename: 'fonts/[name][ext]'
                 }
+            },
+            {
+                test: /\.svg$/i,
+                type: 'asset/source'
+            },
+            {
+                test: /\.pdf$/i,
+                type: 'asset/resource'
             }
         ]
     },
