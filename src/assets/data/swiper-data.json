@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Ultrage",
+    "description": "Ultrage est un outil polyvalent pour la création web pour l'amélioration de la productivité et de la créativité des professionnels et amateurs du web.",
+    "details": "<p>Voici un <strong>contenu enrichi</strong> avec une <a href='#'>lien</a>.</p><ul><li>Point A</li><li>Point B</li></ul>",
+    "image": "/images/realizations/home_ultrage_realization.jpg"
+  },
+  {
+    "title": "GAMA",
+    "description": "GAMA est un outil web de gestion centralisée du VDI, facilitant le déploiement, le suivi et la maintenance des postes de travail virtualisés.",
+    "details": "<p>Voici un <strong>contenu enrichi</strong> avec une <a href='#'>lien</a>.</p><ul><li>Point A</li><li>Point B</li></ul>",
+    "image": "/images/realizations/home_gama_realization.jpg"
+  },
+  {
+    "title": "Polarion",
+    "description": "Polarion est un site web dédié à une association, permettant la gestion des projets, membres et activités via une interface simple et collaborative.",
+    "details": "<p>Voici un <strong>contenu enrichi</strong> avec une <a href='#'>lien</a>.</p><ul><li>Point A</li><li>Point B</li></ul>",
+    "image": "/images/realizations/home_polarion_realization.jpg"
+  },
+  {
+    "title": "ZeBot.",
+    "description": "Zebot est un site web qui permet de piloter, configurer et gérer facilement un bot Discord pour automatiser et modérer un serveur.",
+    "details": "<p>Voici un <strong>contenu enrichi</strong> avec une <a href='#'>lien</a>.</p><ul><li>Point A</li><li>Point B</li></ul>",
+    "image": "/images/realizations/home_zebot_realization.jpg"
+  }
+]
