@@ -71,9 +71,9 @@ class AppSwiper extends HTMLElement {
                 if (slide && title && content) {
                     title.textContent = slide.title;
                     content.innerHTML = `
-                        <p><strong>Description :</strong> ${slide.description}</p>
-                        <p><strong>Détails :</strong> ${slide.details}</p>
-                        <img src="${slide.image}" class="img-fluid mt-2" alt="${slide.title}" />
+                        <p class="mb-4">${slide.description}</p>
+                        <img src="${slide.image}" class="img-fluid mb-4" alt="${slide.title}" />
+                        <div>${slide.details}</div>
                     `;
                 }
             }

@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Développement web",
+    "skills": [
+      "HTML",
+      "CSS",
+      "PHP",
+      "JavaScript",
+      "WordPress",
+      "Symfony",
+      "API Platform",
+      "Node.js",
+      "Express.js",
+      "Webpack",
+      "Vue.js",
+      "Angular",
+      "React",
+      "Bootstrap",
+      "MySQL",
+      "phpMyAdmin",
+      "PhpStorm",
+      "WebStorm",
+      "Visual Studio Code",
+      "Postman",
+      "GitHub",
+      "GitLab"
+    ]
+  },
+  {
+    "title": "Webdesign",
+    "skills": [
+      "Figma",
+      "Adobe Illustrator",
+      "Adobe Photoshop"
+    ]
+  }
+]
