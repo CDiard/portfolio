@@ -20,7 +20,7 @@ class AppSwiper extends HTMLElement {
                     <div class="swiper-slide">
                         <img src="${item.image}" class="img-fluid" alt="${item.title}" />
                         <p class="m-0"><strong>${item.title}</strong></p>
-                        <p class="m-0">${item.description}</p>
+                        <p class="text-justify m-0">${item.description}</p>
                         <button class="btn btn-secondary" data-id="${index}" data-bs-toggle="offcanvas" data-bs-target="#slideOffcanvas" title="En savoir plus sur la réalisation">
                             En savoir plus
                             <app-svg icon="arrow_right"></app-svg>

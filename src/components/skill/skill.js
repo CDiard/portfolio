@@ -10,13 +10,13 @@ class AppSkill extends HTMLElement {
     renderSlides() {
         this.innerHTML = `
         <div class="d-flex flex-column gap-3">
-            <h2 class="m-0">Compétences</h2>
+            <h2 class="glow-effect m-0">Compétences</h2>
             ${data.map(item => `
                 <div class="d-flex flex-column gap-2 p-2">
-                    <p class="m-0"><strong>${item.title}</strong></p>
+                    <p class="glow-effect m-0"><strong>${item.title}</strong></p>
                     <div class="d-flex flex-row flex-wrap gap-2">
                         ${item.skills.map(skill => `
-                            <p class="text-skills m-0">${skill}</p>
+                            <p class="text-skills glow-effect m-0">${skill}</p>
                         `).join('')}
                     </div>
                 </div>
