@@ -1,0 +1,32 @@
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    color: var(--primary-color-portfolio);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+
+    &:hover {
+        background: none;
+        border: none;
+        color: unset;
+    }
+    &.btn-primary {
+        height: 32px;
+        padding: 8px 16px;
+        border: 2px solid var(--primary-color-portfolio);
+
+        &.btn-icon-right {
+            padding: 8px 10px 8px 16px;
+        }
+        &.btn-icon-left {
+            padding: 8px 16px 8px 10px;
+        }
+    }
+}
