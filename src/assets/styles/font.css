@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Videotype';
+    src: url('../fonts/videotype.ttf') format('truetype'), url('../fonts/videotype.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --first-font-portfolio: "Videotype";
+}
