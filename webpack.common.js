@@ -12,7 +12,7 @@ module.exports = {
             patterns: [
                 { from: 'src/assets/images', to: 'images', noErrorOnMissing: true },
                 { from: 'src/assets/fonts', to: 'fonts', noErrorOnMissing: true },
-                { from: 'src/assets/pdf', to: 'pdf', noErrorOnMissing: true }
+                { from: 'src/assets/documents', to: 'documents', noErrorOnMissing: true }
             ]
         })
     ],
@@ -69,7 +69,10 @@ module.exports = {
             },
             {
                 test: /\.pdf$/i,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                generator: {
+                    filename: 'documents/[name][ext]'
+                }
             }
         ]
     },
