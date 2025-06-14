@@ -1,11 +1,11 @@
-import './swiper.css';
-
-import data from '/src/assets/data/swiper-data.json';
-
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+
+import data from '/src/assets/data/swiper-data.json';
+
+import './swiper.css';
 
 class AppSwiper extends HTMLElement {
     connectedCallback() {
@@ -14,23 +14,26 @@ class AppSwiper extends HTMLElement {
 
     renderSlides() {
         this.innerHTML = `
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                ${data.map((item, index) => `
-                    <div class="swiper-slide">
-                        <img src="${item.image}" class="img-fluid" alt="${item.title}" />
-                        <p class="m-0"><strong>${item.title}</strong></p>
-                        <p class="text-justify m-0">${item.description}</p>
-                        <button class="btn btn-secondary" data-id="${index}" data-bs-toggle="offcanvas" data-bs-target="#slideOffcanvas" title="En savoir plus sur la réalisation">
-                            En savoir plus
-                            <app-svg icon="arrow_right"></app-svg>
-                        </button>
-                    </div>
-                `).join('')}
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
+        <div class="content-swiper">
             <div class="swiper-button-prev"></div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    ${data.map((item, index) => `
+                        <div class="swiper-slide">
+                            <img src="${item.image}" class="img-fluid" alt="${item.title}" />
+                            <p class="m-0"><strong>${item.title}</strong></p>
+                            <p class="text-justify m-0">${item.description}</p>
+                            <button class="btn btn-secondary" data-id="${index}" data-bs-toggle="offcanvas" data-bs-target="#slideOffcanvas" title="En savoir plus sur la réalisation">
+                                <span>
+                                    En savoir plus
+                                    <app-svg icon="arrow_right"></app-svg>
+                                </span>
+                            </button>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
         </div>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="slideOffcanvas">
@@ -44,14 +47,14 @@ class AppSwiper extends HTMLElement {
         </div>`;
 
         requestAnimationFrame(() => {
-            const swiperElement = this.querySelector('.swiper');
+            const swiperElement = this.querySelector('.content-swiper .swiper');
             if (swiperElement) {
                 new Swiper(swiperElement, {
                     modules: [Navigation],
                     loop: true,
                     navigation: {
-                        nextEl: this.querySelector('.swiper .swiper-button-next'),
-                        prevEl: this.querySelector('.swiper .swiper-button-prev'),
+                        nextEl: this.querySelector('.content-swiper .swiper-button-next'),
+                        prevEl: this.querySelector('.content-swiper .swiper-button-prev'),
                     },
                     slidesPerView: 3,
                     spaceBetween: 16,
