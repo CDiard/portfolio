@@ -11,22 +11,143 @@
     text-align: center;
     font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+    transition: all 200ms ease-in;
 
     &:hover {
         background: none;
         border: none;
         color: unset;
+        transform: scale(1.08);
     }
+
     &.btn-primary {
         height: 32px;
         padding: 8px 16px;
         border: 2px solid var(--primary-color-portfolio);
+        box-shadow: var(--box-shadow-portfolio);
+
+        &:hover {
+            animation: borderBtnPrimary 1.2s infinite ease-in-out;
+        }
 
         &.btn-icon-right {
             padding: 8px 10px 8px 16px;
         }
+
         &.btn-icon-left {
             padding: 8px 16px 8px 10px;
         }
+
+        span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 4px;
+
+            svg {
+                width: 28px;
+                height: 28px;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+
+    &.btn-secondary {
+        height: 32px;
+        padding: 8px 16px;
+
+        &:hover span::before {
+            animation: lineBtnSecondary 2s infinite ease-in-out;
+        }
+
+        span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            transition: all 250ms ease-in;
+
+            &::before {
+                content: "";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-color: var(--primary-color-portfolio);
+                box-shadow: var(--text-shadow-portfolio);
+                pointer-events: none;
+                z-index: -1;
+
+            }
+
+            svg {
+                width: 22px;
+                height: 22px;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+
+    &.btn-icon-only {
+        width: min-content;
+
+        &:hover {
+            transform: scale(1.2);
+
+            svg {
+                animation: iconBtnPrimary 1.2s infinite ease-in-out;
+            }
+        }
+    }
+}
+
+@keyframes borderBtnPrimary {
+    0% {
+        box-shadow: var(--box-shadow-portfolio);
+    }
+    50% {
+        box-shadow: var(--box-light-shadow-portfolio);
+    }
+    100% {
+        box-shadow: var(--box-shadow-portfolio);
+    }
+}
+
+@keyframes iconBtnPrimary {
+    0% {
+        filter: var(--filter-shadow-portfolio);
+    }
+    50% {
+        filter: var(--filter-light-shadow-portfolio);
+    }
+    100% {
+        filter: var(--filter-shadow-portfolio);
+    }
+}
+
+@keyframes lineBtnSecondary {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+    25% {
+        width: 0;
+        left: 100%;
+    }
+    50% {
+        width: 0;
+        left: 0;
+    }
+    75% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 100%;
+        left: 0;
     }
 }

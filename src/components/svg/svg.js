@@ -30,6 +30,8 @@ class AppSvg extends HTMLElement {
             return;
         }
 
+        this.classList.add('app-svg');
+
         this.innerHTML = svg;
     }
 }
