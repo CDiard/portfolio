@@ -47,14 +47,25 @@ class AppSwiper extends HTMLElement {
             const swiperElement = this.querySelector('.swiper');
             if (swiperElement) {
                 new Swiper(swiperElement, {
-                    modules: [ Navigation ],
+                    modules: [Navigation],
                     loop: true,
                     navigation: {
                         nextEl: this.querySelector('.swiper .swiper-button-next'),
                         prevEl: this.querySelector('.swiper .swiper-button-prev'),
                     },
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 16,
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        992: {
+                            slidesPerView: 3,
+                        },
+                    },
                 });
             } else {
                 console.warn('<app-swiper> : élément .swiper introuvable');
