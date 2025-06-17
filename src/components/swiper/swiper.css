@@ -6,6 +6,16 @@
 
     .swiper {
         width: calc(100% - 96px);
+        box-shadow: var(--box-light-shadow-portfolio);
+
+        .swiper-wrapper .swiper-slide {
+            height: auto !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid var(--primary-color-portfolio);
+            box-shadow: var(--box-light-shadow-portfolio);
+        }
     }
 
     .swiper-button-prev, .swiper-button-next {
@@ -24,6 +34,7 @@
             transform: scale(1.08);
             animation: borderBtnPrimary 1.2s infinite ease-in-out;
         }
+
         &::after {
             content: "";
             width: 24px;
