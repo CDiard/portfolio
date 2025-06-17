@@ -9,7 +9,7 @@
     border-radius: 0;
     color: var(--primary-color-portfolio);
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     transition: all 200ms ease-in;
