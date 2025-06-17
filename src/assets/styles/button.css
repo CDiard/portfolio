@@ -21,10 +21,16 @@
         transform: scale(1.08);
     }
 
+    &:active {
+        color: var(--primary-color-portfolio) !important;
+        background-color: transparent !important;
+        border-color: unset !important;
+    }
+
     &.btn-primary {
         height: 32px;
         padding: 8px 16px;
-        border: 2px solid var(--primary-color-portfolio);
+        border: 2px solid var(--primary-color-portfolio) !important;
         box-shadow: var(--box-shadow-portfolio);
 
         &:hover {
