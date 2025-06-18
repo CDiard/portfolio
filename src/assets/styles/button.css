@@ -27,11 +27,19 @@
         border-color: unset !important;
     }
 
-    &.btn-primary {
+    &:focus-visible {
+        color: var(--primary-color-portfolio) !important;
+        background-color: transparent !important;
+        border-color: unset !important;
+        outline: none;
+        box-shadow: unset !important;
+    }
+
+        &.btn-primary {
         height: 32px;
         padding: 8px 16px;
         border: 2px solid var(--primary-color-portfolio) !important;
-        box-shadow: var(--box-shadow-portfolio);
+        box-shadow: var(--box-shadow-portfolio) !important;
 
         &:hover {
             animation: borderBtnPrimary 1.2s infinite ease-in-out;
