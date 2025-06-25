@@ -103,6 +103,16 @@ hr {
     }
 }
 
+.date-resume {
+    height: min-content;
+    text-align: center;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0 8px;
+    border: 2px solid var(--primary-color-portfolio);
+    box-shadow: var(--box-light-shadow-portfolio);
+}
+
 .glow-effect {
     text-shadow: var(--text-shadow-portfolio);
     mix-blend-mode: screen;
