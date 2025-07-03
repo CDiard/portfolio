@@ -1,0 +1,38 @@
+.form-label {
+    color: var(--primary-color-portfolio);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.form-control {
+    height: 28px;
+    padding: 4px 8px;
+    color: var(--primary-color-portfolio);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    background-color: transparent;
+    border: 1px solid var(--primary-color-portfolio);
+    border-radius: 0;
+    box-shadow: var(--box-light-shadow-portfolio);
+    text-shadow: var(--text-shadow-portfolio);
+    opacity: 1;
+
+    &.form-textarea {
+        height: 84px;
+        resize: none;
+    }
+    &::placeholder {
+        color: var(--primary-color-portfolio);
+        opacity: 0.6;
+    }
+    &:focus {
+        color: var(--primary-color-portfolio);
+        background-color: transparent;
+        border: 1px solid var(--primary-color-portfolio);
+        outline: none;
+        box-shadow: var(--box-light-shadow-portfolio);
+        opacity: 1;
+    }
+}
