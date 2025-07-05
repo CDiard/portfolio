@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: text/plain; charset=utf-8');
+
 // Configuration
 $to = "contact@corentindiard.fr";
 
@@ -42,8 +44,7 @@ $headers = [
 
 // Envoi
 if (mail($to, $subject, $fullMessage, implode("\r\n", $headers))) {
-    header("Location: https://corentindiard.fr/#contact");
-    exit;
+    echo "Message envoyé avec succès !";
 } else {
     http_response_code(500);
     echo "Erreur lors de l'envoi du message.";

@@ -36,31 +36,37 @@
             </div>
 
             <div class="col-12 col-xl-6">
-                <form action="/sendMail.php" method="POST" class="d-flex flex-column gap-3">
+                <form id="contactForm" class="d-flex flex-column gap-3">
                     <div class="d-flex flex-row gap-3">
                         <div class="w-50">
                             <label for="firstname" class="glow-effect form-label">Prénom*</label>
                             <input type="text" class="form-control" name="firstname" id="firstname" placeholder="John" required>
+                            <p class="error-message glow-effect"></p>
                         </div>
                         <div class="w-50">
                             <label for="lastname" class="glow-effect form-label">Nom*</label>
                             <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Doe" required>
+                            <p class="error-message glow-effect"></p>
                         </div>
                     </div>
                     <div>
                         <label for="email" class="glow-effect form-label">Adresse e-mail*</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="john.doe@gmail.com" required>
+                        <p class="error-message glow-effect"></p>
                     </div>
                     <div>
                         <label for="subject" class="glow-effect form-label">Sujet*</label>
                         <input type="text" class="form-control" name="subject" id="subject" placeholder="Demande d'informations"
                                required>
+                        <p class="error-message glow-effect"></p>
                     </div>
                     <div>
                         <label for="message" class="glow-effect form-label">Message*</label>
                         <textarea class="form-textarea form-control" id="message" rows="4" name="message"
                                   placeholder="Pourriez-vous m'envoyer plus d'informations ?" required></textarea>
+                        <p class="error-message glow-effect"></p>
                     </div>
+                    <p id="responseMessage" class="glow-effect"></p>
                     <div>
                         <button class="btn btn-primary btn-icon-right glow-effect" type="submit">
                             <span>
