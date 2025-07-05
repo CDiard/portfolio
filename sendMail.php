@@ -36,7 +36,7 @@ $headers = [
     "MIME-Version: 1.0",
     "Content-type: text/html; charset=utf-8",
     "X-Mailer: PHP/" . phpversion(),
-    "From: \"{$firstname} {$lastname}\" <{$from}>",
+    "From: \"Demande de contact\" <contact@corentindiard.fr>",
     "Reply-To: {$from}"
 ];
 
