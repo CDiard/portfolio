@@ -6,7 +6,17 @@ body {
     font-family: var(--first-font-portfolio), sans-serif;
     color: var(--primary-color-portfolio);
     background: radial-gradient(95% 65% at var(--x1) var(--y1), #4ECDC44D 0%, transparent 100%), radial-gradient(255% 90% at var(--x2) var(--y2), #FF6B6B4D 0%, transparent 50%), radial-gradient(265% 100% at var(--x3) var(--y3), #5F4B8B4D 0%, transparent 50%), var(--dark-color-portfolio);
-    backdrop-filter: blur(200px) saturate(1.2);
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(200px) saturate(1.2);
+        z-index: -1;
+    }
 }
 
 h1 {
