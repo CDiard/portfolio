@@ -26,7 +26,7 @@ class AppSwiper extends HTMLElement {
                                     <p class="m-0"><strong>${item.title}</strong></p>
                                     <p class="text-justify m-0">${item.description}</p>
                                 </div>
-                                <button class="mx-auto btn btn-secondary" data-id="${index}" data-bs-toggle="offcanvas" data-bs-target="#slideOffcanvas" title="En savoir plus sur la réalisation">
+                                <button class="mx-auto btn btn-secondary" data-id="${index}" data-bs-toggle="modal" data-bs-target="#slideModal" title="En savoir plus sur la réalisation">
                                     <span>
                                         En savoir plus
                                         <app-svg icon="arrow_right"></app-svg>
@@ -40,13 +40,17 @@ class AppSwiper extends HTMLElement {
             <div class="swiper-button-next"></div>
         </div>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="slideOffcanvas">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasTitle">Détails</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
-            </div>
-            <div class="offcanvas-body" id="offcanvasContent">
-                Chargement...
+        <div class="modal fade" id="slideModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Détails</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body" id="modalContent">
+                        Chargement...
+                    </div>
+                </div>
             </div>
         </div>`;
 
@@ -84,8 +88,8 @@ class AppSwiper extends HTMLElement {
             if (btn) {
                 const id = parseInt(btn.getAttribute('data-id'));
                 const slide = data[id];
-                const title = this.querySelector('#offcanvasTitle');
-                const content = this.querySelector('#offcanvasContent');
+                const title = this.querySelector('#modalTitle');
+                const content = this.querySelector('#modalContent');
                 if (slide && title && content) {
                     title.textContent = slide.title;
                     content.innerHTML = `
