@@ -1,10 +1,14 @@
 @font-face {
-    font-family: 'Videotype';
-    src: url('../fonts/videotype.ttf') format('truetype'), url('../fonts/videotype.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Bricolage Grotesque';
+    src: url('../fonts/bricolage_grotesque.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Signika Negative';
+    src: url('../fonts/signika_negative.ttf') format('truetype');
 }
 
 :root {
-    --first-font-portfolio: "Videotype";
+    --first-font-portfolio: "Bricolage Grotesque";
+    --second-font-portfolio: "Signika Negative";
 }
