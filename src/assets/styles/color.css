@@ -1,13 +1,8 @@
 :root {
-    --primary-color-portfolio: #FEEC13FF;
-    --secondary-color-portfolio: #CD3213;
-    --dark-color-portfolio: #100508;
-    --black-color-portfolio: #000;
-    --white-color-portfolio: #FFF;
-
-    --box-shadow-portfolio: 0 0 0.5px #FEEC13DB, 0 0 2px #FEEC13CB, 0 0 10px #FEEC13EB, 0 0 80px #CD321359, 0 2px 2px #FF1F1F59, 0 0 8px #DB1000, -120px 0 220px #DB1000, 120px 0 220px #DB1000, inset 0 0 0.5px #FEEC13DB, inset 0 0 2px #FEEC13CB, inset 0 0 10px #FEEC13EB, inset 0 0 80px #CD321359;
-    --box-light-shadow-portfolio: 0 0 0.25px #FEEC1370, 0 0 1px #FEEC1365, 0 0 5px #FEEC1390, 0 0 40px #CD321320, 0 1px 1px #FF1F1F26, 0 0 4px #DB100033, -60px 0 110px #DB100019, 60px 0 110px #DB100019, inset 0 0 0.25px #FEEC1370, inset 0 0 1px #FEEC1365, inset 0 0 5px #FEEC1390, inset 0 0 40px #CD321320;
-    --text-shadow-portfolio: 0 0 0.5px #FEEC13DB, 0 0 2px #FEEC13CB, 0 0 10px #FEEC13EB, 0 0 80px #CD321359, 0 2px 2px #FF1F1F59, 0 0 8px #DB1000, -120px 0 220px #DB1000, 120px 0 220px #DB1000;
-    --filter-shadow-portfolio: drop-shadow(0 0 0.5px #FEEC13DB) drop-shadow(0 0 2px #FEEC13CB) drop-shadow(0 0 10px #FEEC13EB) drop-shadow(0 0 80px #CD321359) drop-shadow(0 2px 2px #FF1F1F59) drop-shadow(0 0 8px #DB1000A0) drop-shadow(-50px 0 150px #DB1000A0) drop-shadow(50px 0 150px #DB1000A0) blur(0.2px);
-    --filter-light-shadow-portfolio: drop-shadow(0 0 0.25px #FEEC1370) drop-shadow(0 0 1px #FEEC1365) drop-shadow(0 0 5px #FEEC1390) drop-shadow(0 0 40px #CD321320) drop-shadow(0 1px 1px #FF1F1F30) drop-shadow(0 0 4px #DB100080) drop-shadow(-25px 0 75px #DB100080) drop-shadow(25px 0 75px #DB100080) blur(0.1px);
+    --primary-color-portfolio: #598BFF;
+    --secondary-color-portfolio: #00A185;
+    --text-color-portfolio: #FFFFFF;
+    --dark-color-portfolio: #1E2233;
+    --black-color-portfolio: #000000;
+    --white-color-portfolio: #FFFFFF;
 }
