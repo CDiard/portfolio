@@ -6,7 +6,6 @@
 
     .swiper {
         width: calc(100% - 96px);
-        box-shadow: var(--box-light-shadow-portfolio);
 
         .swiper-wrapper .swiper-slide {
             height: auto !important;
@@ -14,14 +13,11 @@
             flex-direction: column;
             justify-content: space-between;
             border: 2px solid var(--primary-color-portfolio);
-            box-shadow: var(--box-light-shadow-portfolio);
 
             img {
-                filter: grayscale(1) sepia(1) hue-rotate(8deg) saturate(8) brightness(1.1) drop-shadow(0 0 0.3px #FEEC13AA) drop-shadow(0 0 1px #FEEC1399) drop-shadow(0 0 5px #FEEC1370) drop-shadow(0 0 40px #CD321320) drop-shadow(0 1px 1px #FF1F1F22) drop-shadow(0 0 4px #DB100011) drop-shadow(-20px 0 60px #DB100011) drop-shadow(20px 0 60px #DB100011) blur(0.2px);
                 transition: all 300ms ease;
 
                 &:hover {
-                    filter: none;
                     transform: scale(1.03);
                 }
             }
@@ -37,12 +33,10 @@
         left: unset;
         right: unset;
         border: 2px solid var(--primary-color-portfolio);
-        box-shadow: var(--box-shadow-portfolio);
         transition: all 300ms ease-in;
 
         &:hover {
             transform: scale(1.08);
-            animation: borderBtnPrimary 1.2s infinite ease-in-out;
         }
 
         &::after {
@@ -53,7 +47,6 @@
             background-repeat: no-repeat;
             background-size: contain;
             aspect-ratio: 1/1;
-            filter: var(--filter-shadow-portfolio);
             mix-blend-mode: screen;
         }
     }

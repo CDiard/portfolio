@@ -15,7 +15,6 @@ body {
         top: 0;
         left: 0;
         opacity: 0.5;
-        background: url(../images/noise.png) 0 0 / 90px 90px repeat, url(../images/noise.png) 0 0 / 210px 210px repeat, url(../images/pattern_lines.png) 0 0 / 28px 28px repeat;
         background-blend-mode: color-burn, color-dodge, soft-light;
         mix-blend-mode: overlay;
         z-index: -1;
@@ -84,7 +83,6 @@ a {
 
 hr {
     border-top: 2px solid var(--primary-color-portfolio);
-    box-shadow: var(--box-shadow-portfolio);
     opacity: 1;
 }
 
@@ -98,7 +96,6 @@ hr {
 
     svg {
         fill: var(--primary-color-portfolio);
-        filter: var(--filter-shadow-portfolio);
         mix-blend-mode: screen;
     }
 }
@@ -110,11 +107,4 @@ hr {
     white-space: nowrap;
     padding: 0 8px;
     border: 2px solid var(--primary-color-portfolio);
-    box-shadow: var(--box-light-shadow-portfolio);
-}
-
-.glow-effect {
-    text-shadow: var(--text-shadow-portfolio);
-    mix-blend-mode: screen;
-    filter: blur(0.3px);
 }

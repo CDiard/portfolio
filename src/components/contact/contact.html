@@ -2,33 +2,31 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-6 d-flex flex-column gap-3">
-                <h2 class="glow-effect m-0">Contact</h2>
+                <h2 class="m-0">Contact</h2>
                 <div class="d-flex flex-column gap-2">
                     <div class="d-flex flex-row gap-3">
                         <app-svg icon="mail"></app-svg>
                         <a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#099;&#111;&#114;&#101;&#110;&#116;&#105;&#110;&#100;&#105;&#110;&#097;&#114;&#100;&#046;&#102;&#114;"
-                           title="Me contacter par mail" class="glow-effect" rel="nofollow">
+                           title="Me contacter par mail" rel="nofollow">
                             &#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#099;&#111;&#114;&#101;&#110;&#116;&#105;&#110;&#100;&#105;&#110;&#097;&#114;&#100;&#046;&#102;&#114;
                         </a>
                     </div>
                     <div class="d-flex flex-row gap-3">
                         <app-svg icon="call"></app-svg>
                         <a href="tel:&#043;&#051;&#051;&#055;&#056;&#049;&#057;&#057;&#054;&#053;&#057;&#048;"
-                           title="Me contacter par téléphone" class="glow-effect" rel="nofollow">
+                           title="Me contacter par téléphone" rel="nofollow">
                             &#048;&#055; &#056;&#049; &#057;&#057; &#054;&#053; &#057;&#048;
                         </a>
                     </div>
                     <div class="d-flex flex-row gap-3">
                         <app-svg icon="linkedin"></app-svg>
-                        <a href="https://www.linkedin.com/in/corentin-diard/" target="_blank" title="Mon LinkedIn"
-                           class="glow-effect">
+                        <a href="https://www.linkedin.com/in/corentin-diard/" target="_blank" title="Mon LinkedIn">
                             Corentin Diard
                         </a>
                     </div>
                     <div class="d-flex flex-row gap-3">
                         <app-svg icon="github"></app-svg>
-                        <a href="https://github.com/CDiard" target="_blank" title="Mon GitHub"
-                           class="glow-effect">
+                        <a href="https://github.com/CDiard" target="_blank" title="Mon GitHub">
                             CDiard
                         </a>
                     </div>
@@ -39,43 +37,47 @@
                 <form id="contactForm" class="d-flex flex-column gap-3">
                     <div class="d-flex flex-row gap-3">
                         <div class="w-50">
-                            <label for="firstname" class="glow-effect form-label">Prénom*</label>
-                            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="John" required>
-                            <p class="error-message glow-effect"></p>
+                            <label for="firstname" class="form-label">Prénom*</label>
+                            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="John"
+                                   required>
+                            <p class="error-message "></p>
                         </div>
                         <div class="w-50">
-                            <label for="lastname" class="glow-effect form-label">Nom*</label>
-                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Doe" required>
-                            <p class="error-message glow-effect"></p>
+                            <label for="lastname" class="form-label">Nom*</label>
+                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Doe"
+                                   required>
+                            <p class="error-message "></p>
                         </div>
                     </div>
                     <div>
-                        <label for="email" class="glow-effect form-label">Adresse e-mail*</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="john.doe@gmail.com" required>
-                        <p class="error-message glow-effect"></p>
+                        <label for="email" class="form-label">Adresse e-mail*</label>
+                        <input type="email" class="form-control" name="email" id="email"
+                               placeholder="john.doe@gmail.com" required>
+                        <p class="error-message "></p>
                     </div>
                     <div>
-                        <label for="subject" class="glow-effect form-label">Sujet*</label>
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Demande d'informations"
+                        <label for="subject" class="form-label">Sujet*</label>
+                        <input type="text" class="form-control" name="subject" id="subject"
+                               placeholder="Demande d'informations"
                                required>
-                        <p class="error-message glow-effect"></p>
+                        <p class="error-message "></p>
                     </div>
                     <div>
-                        <label for="message" class="glow-effect form-label">Message*</label>
+                        <label for="message" class="form-label">Message*</label>
                         <textarea class="form-textarea form-control" id="message" rows="4" name="message"
                                   placeholder="Pourriez-vous m'envoyer plus d'informations ?" required></textarea>
-                        <p class="error-message glow-effect"></p>
+                        <p class="error-message "></p>
                     </div>
-                    <p id="responseMessage" class="glow-effect"></p>
+                    <p id="responseMessage"></p>
                     <div>
-                        <button class="btn btn-primary btn-icon-right glow-effect" type="submit">
+                        <button class="btn btn-primary btn-icon-right" type="submit">
                             <span>
                                 Envoyer
                                 <app-svg icon="send"></app-svg>
                             </span>
                         </button>
                     </div>
-                    <p class="glow-effect m-0">* Obligatoire</p>
+                    <p class="m-0">* Obligatoire</p>
                 </form>
             </div>
         </div>

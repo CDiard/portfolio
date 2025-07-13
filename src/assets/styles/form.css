@@ -15,8 +15,6 @@
     background-color: transparent;
     border: 1px solid var(--primary-color-portfolio);
     border-radius: 0;
-    box-shadow: var(--box-light-shadow-portfolio);
-    text-shadow: var(--text-shadow-portfolio);
     opacity: 1;
 
     &.form-textarea {
@@ -32,7 +30,6 @@
         background-color: transparent;
         border: 1px solid var(--primary-color-portfolio);
         outline: none;
-        box-shadow: var(--box-light-shadow-portfolio);
         opacity: 1;
     }
 }

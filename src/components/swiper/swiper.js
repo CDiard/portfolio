@@ -23,10 +23,10 @@ class AppSwiper extends HTMLElement {
                             <div class="h-100 w-100 d-flex flex-column justify-content-between align-items-stretch gap-4">
                                 <div class="d-flex flex-column justify-content-start align-items-start gap-2">
                                     <img src="${item.image}" class="img-fluid" alt="${item.title}" />
-                                    <p class="m-0 glow-effect"><strong>${item.title}</strong></p>
-                                    <p class="text-justify m-0 glow-effect">${item.description}</p>
+                                    <p class="m-0"><strong>${item.title}</strong></p>
+                                    <p class="text-justify m-0">${item.description}</p>
                                 </div>
-                                <button class="mx-auto btn btn-secondary glow-effect" data-id="${index}" data-bs-toggle="offcanvas" data-bs-target="#slideOffcanvas" title="En savoir plus sur la réalisation">
+                                <button class="mx-auto btn btn-secondary" data-id="${index}" data-bs-toggle="offcanvas" data-bs-target="#slideOffcanvas" title="En savoir plus sur la réalisation">
                                     <span>
                                         En savoir plus
                                         <app-svg icon="arrow_right"></app-svg>
