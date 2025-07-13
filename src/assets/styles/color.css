@@ -1,8 +1,15 @@
 :root {
     --primary-color-portfolio: #598BFF;
     --secondary-color-portfolio: #00A185;
-    --text-color-portfolio: #FFFFFF;
+    --text-color-portfolio: #FFF;
     --dark-color-portfolio: #1E2233;
-    --black-color-portfolio: #000000;
-    --white-color-portfolio: #FFFFFF;
+    --black-color-portfolio: #000;
+    --white-color-portfolio: #FFF;
+
+    --x1: 45%;
+    --y1: 70%;
+    --x2: 85%;
+    --y2: 40%;
+    --x3: 20%;
+    --y3: 35%;
 }
