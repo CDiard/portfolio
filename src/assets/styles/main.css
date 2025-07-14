@@ -3,8 +3,8 @@ body, html {
 }
 
 body {
-    font-family: var(--first-font-portfolio), sans-serif;
-    color: var(--primary-color-portfolio);
+    font-family: var(--second-font-portfolio), sans-serif;
+    color: var(--text-color-portfolio);
     background: radial-gradient(95% 65% at var(--x1) var(--y1), #4ECDC44D 0%, transparent 100%), radial-gradient(255% 90% at var(--x2) var(--y2), #FF6B6B4D 0%, transparent 50%), radial-gradient(265% 100% at var(--x3) var(--y3), #5F4B8B4D 0%, transparent 50%), var(--dark-color-portfolio);
 
     &::before {
@@ -20,27 +20,35 @@ body {
 }
 
 h1 {
+    font-family: var(--first-font-portfolio), sans-serif;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: normal;
+    color: var(--primary-color-portfolio);
 }
 
 h2 {
+    font-family: var(--first-font-portfolio), sans-serif;
     font-size: 2.25rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: normal;
+    color: var(--primary-color-portfolio);
 }
 
 h3 {
+    font-family: var(--first-font-portfolio), sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: normal;
+    color: var(--primary-color-portfolio);
 }
 
 .subtitle {
+    font-family: var(--first-font-portfolio), sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     line-height: normal;
+    color: var(--secondary-color-portfolio);
 }
 
 p {
@@ -50,7 +58,7 @@ p {
 
     &.subtext {
         font-size: 0.875rem;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1rem;
     }
 
@@ -62,6 +70,7 @@ p {
         font-size: 0.875rem;
         font-weight: 700;
         line-height: 1.25rem;
+        color: var(--secondary-color-portfolio);
     }
 }
 
@@ -76,11 +85,11 @@ a {
     font-weight: 400;
     line-height: 1.25rem;
     text-decoration: underline;
-    color: var(--primary-color-portfolio);
+    color: var(--text-color-portfolio);
 }
 
 hr {
-    border-top: 2px solid var(--primary-color-portfolio);
+    border-top: 2px solid var(--secondary-color-portfolio);
     opacity: 1;
 }
 
@@ -93,7 +102,7 @@ hr {
     aspect-ratio: 1/1;
 
     svg {
-        fill: var(--primary-color-portfolio);
+        fill: var(--white-color-portfolio);
         mix-blend-mode: screen;
     }
 }
@@ -104,5 +113,5 @@ hr {
     text-wrap: nowrap;
     white-space: nowrap;
     padding: 0 8px;
-    border: 2px solid var(--primary-color-portfolio);
+    border: 2px solid var(--secondary-color-portfolio);
 }
