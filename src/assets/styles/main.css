@@ -103,7 +103,6 @@ hr {
 
     svg {
         fill: var(--white-color-portfolio);
-        mix-blend-mode: screen;
     }
 }
 

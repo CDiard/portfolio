@@ -7,7 +7,6 @@
     background: none;
     border: none;
     border-radius: 0;
-    color: var(--primary-color-portfolio);
     text-align: center;
     font-size: 1rem;
     font-weight: 700;
@@ -22,23 +21,24 @@
     }
 
     &:active {
-        color: var(--primary-color-portfolio) !important;
-        background-color: transparent !important;
         border-color: unset !important;
     }
 
     &:focus-visible {
-        color: var(--primary-color-portfolio) !important;
-        background-color: transparent !important;
+        color: inherit;
+        background-color: transparent;
         border-color: unset !important;
         outline: none;
         box-shadow: unset !important;
     }
 
-        &.btn-primary {
+    &.btn-primary {
         height: 32px;
         padding: 8px 16px;
-        border: 2px solid var(--primary-color-portfolio) !important;
+        color: var(--dark-color-portfolio);
+        background-color: var(--primary-color-portfolio);
+        border: 2px solid var(--primary-color-portfolio);
+        border-radius: 16px;
 
         &.btn-icon-right {
             padding: 8px 10px 8px 16px;
@@ -46,6 +46,21 @@
 
         &.btn-icon-left {
             padding: 8px 16px 8px 10px;
+        }
+
+        &:hover {
+            color: var(--primary-color-portfolio);
+            background-color: transparent;
+            border: 2px solid var(--primary-color-portfolio);
+
+            svg {
+                fill: var(--primary-color-portfolio);
+            }
+        }
+
+        &:active {
+            color: var(--dark-color-portfolio) !important;
+            background-color: var(--primary-color-portfolio);
         }
 
         span {
@@ -58,6 +73,7 @@
                 width: 28px;
                 height: 28px;
                 aspect-ratio: 1/1;
+                fill: var(--dark-color-portfolio);
             }
         }
     }
@@ -65,9 +81,15 @@
     &.btn-secondary {
         height: 32px;
         padding: 8px 16px;
+        color: var(--secondary-color-portfolio);
 
         &:hover span::before {
             animation: lineBtnSecondary 2s infinite ease-in-out;
+        }
+
+        &:active {
+            color: var(--secondary-color-portfolio) !important;
+            background-color: transparent;
         }
 
         span {
@@ -86,26 +108,22 @@
                 bottom: 0;
                 right: 0;
                 left: 0;
-                background-color: var(--primary-color-portfolio);
+                background-color: var(--secondary-color-portfolio);
                 pointer-events: none;
                 z-index: -1;
-
             }
 
             svg {
                 width: 22px;
                 height: 22px;
                 aspect-ratio: 1/1;
+                fill: var(--secondary-color-portfolio);
             }
         }
     }
 
     &.btn-icon-only {
         width: min-content;
-
-        &:hover {
-            transform: scale(1.2);
-        }
     }
 }
 
