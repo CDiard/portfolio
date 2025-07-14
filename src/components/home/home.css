@@ -1,0 +1,5 @@
+#presenting {
+    .image-presenting {
+        filter: drop-shadow(0 0 8px color-mix(in srgb, var(--dark-color-portfolio) 32%, transparent));
+    }
+}
