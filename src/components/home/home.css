@@ -3,3 +3,17 @@
         filter: drop-shadow(0 0 8px color-mix(in srgb, var(--dark-color-portfolio) 32%, transparent));
     }
 }
+
+.divider {
+    gap: 32px;
+
+    hr {
+        width: 15%;
+    }
+
+    .icon-divider svg {
+        width: 32px;
+        height: 32px;
+        fill: var(--secondary-color-portfolio);
+    }
+}

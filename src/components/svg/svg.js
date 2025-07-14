@@ -6,6 +6,9 @@ import addIcon from '/src/assets/images/svg/add.svg';
 import arrowRightIcon from '/src/assets/images/svg/arrow_right.svg';
 import downloadIcon from '/src/assets/images/svg/download.svg';
 import sendIcon from '/src/assets/images/svg/send.svg';
+import chatBubbleIcon from '/src/assets/images/svg/chat_bubble.svg';
+import editSquareIcon from '/src/assets/images/svg/edit_square.svg';
+import workIcon from '/src/assets/images/svg/work.svg';
 
 const icons = {
     call: callIcon,
@@ -16,6 +19,9 @@ const icons = {
     arrow_right: arrowRightIcon,
     download: downloadIcon,
     send: sendIcon,
+    chat_bubble: chatBubbleIcon,
+    edit_square: editSquareIcon,
+    work: workIcon,
 };
 
 class AppSvg extends HTMLElement {
