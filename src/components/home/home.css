@@ -19,6 +19,9 @@
 
     hr {
         width: 15%;
+        @media (max-width: 1200px) {
+            width: 25%;
+        }
     }
 
     .icon-divider svg {
