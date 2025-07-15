@@ -15,18 +15,22 @@ class AppSwiper extends HTMLElement {
     renderSlides() {
         this.innerHTML = `
         <div class="content-swiper">
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-prev">
+                <app-svg icon="arrow_back"></app-svg>
+            </div>
             <div class="swiper">
                 <div class="swiper-wrapper">
                     ${data.map((item, index) => `
-                        <div class="swiper-slide p-3">
-                            <div class="h-100 w-100 d-flex flex-column justify-content-between align-items-stretch gap-4">
-                                <div class="d-flex flex-column justify-content-start align-items-start gap-2">
+                        <div class="swiper-slide position-relative">
+                            <div class="h-100 w-100 d-flex flex-column justify-content-between align-items-stretch pb-3 position-static">
+                                <div class="image-swiper w-100 d-flex flex-column justify-content-center align-items-center overflow-hidden">
                                     <img src="${item.image}" class="img-fluid" alt="${item.title}" />
-                                    <p class="m-0"><strong>${item.title}</strong></p>
-                                    <p class="text-justify m-0">${item.description}</p>
                                 </div>
-                                <button class="mx-auto btn btn-secondary" data-id="${index}" data-bs-toggle="modal" data-bs-target="#slideModal" title="En savoir plus sur la réalisation">
+                                <div class="d-flex flex-column justify-content-start align-items-start gap-2 p-3">
+                                    <p class="m-0"><strong>${item.title}</strong></p>
+                                    <p class="subtext text-justify m-0">${item.description}</p>
+                                </div>
+                                <button class="mx-auto btn btn-secondary stretched-link" data-id="${index}" data-bs-toggle="modal" data-bs-target="#slideModal" title="En savoir plus sur la réalisation">
                                     <span>
                                         En savoir plus
                                         <app-svg icon="arrow_right"></app-svg>
@@ -37,7 +41,9 @@ class AppSwiper extends HTMLElement {
                     `).join('')}
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-next">
+                <app-svg icon="arrow_forward"></app-svg>
+            </div>
         </div>
 
         <div class="modal fade" id="slideModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">

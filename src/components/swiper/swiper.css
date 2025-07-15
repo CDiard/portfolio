@@ -12,14 +12,30 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: 2px solid var(--primary-color-portfolio);
+            background-color: color-mix(in srgb, var(--dark-color-portfolio) 80%, transparent);
+            border: 2px solid var(--secondary-color-portfolio);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
 
-            img {
-                transition: all 300ms ease;
+            &>div:has(> .btn:hover) .image-swiper img {
+                transform: scale(1.1);
+            }
 
-                &:hover {
-                    transform: scale(1.03);
+            .image-swiper {
+                border-bottom: 2px solid var(--secondary-color-portfolio);
+
+                img {
+                    transition: all 300ms ease;
                 }
+            }
+
+            strong {
+                color: var(--text-color-portfolio);
+            }
+
+            .btn {
+                transform: none;
             }
         }
     }
@@ -27,35 +43,33 @@
     .swiper-button-prev, .swiper-button-next {
         width: auto;
         height: auto;
-        padding: 2px;
+        padding: 4px;
         position: relative;
         top: unset;
         left: unset;
         right: unset;
+        background-color: var(--primary-color-portfolio);
         border: 2px solid var(--primary-color-portfolio);
+        border-radius: 32px;
         transition: all 300ms ease-in;
 
         &:hover {
-            transform: scale(1.08);
+            background-color: transparent;
+            transform: scale(1.2);
+
+            svg {
+                fill: var(--primary-color-portfolio);
+            }
         }
 
         &::after {
-            content: "";
+            content: none;
+        }
+
+        svg {
             width: 24px;
             height: 24px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            aspect-ratio: 1/1;
-            mix-blend-mode: screen;
+            fill: var(--dark-color-portfolio);
         }
-    }
-
-    .swiper-button-prev::after {
-        background-image: url("../../assets/images/svg/arrow_back.svg");
-    }
-
-    .swiper-button-next::after {
-        background-image: url("../../assets/images/svg/arrow_forward.svg");
     }
 }

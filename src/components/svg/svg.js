@@ -4,6 +4,8 @@ import linkedinIcon from '/src/assets/images/svg/linkedin.svg';
 import mailIcon from '/src/assets/images/svg/mail.svg';
 import addIcon from '/src/assets/images/svg/add.svg';
 import arrowRightIcon from '/src/assets/images/svg/arrow_right.svg';
+import arrowBackIcon from '/src/assets/images/svg/arrow_back.svg';
+import arrowForwardIcon from '/src/assets/images/svg/arrow_forward.svg';
 import downloadIcon from '/src/assets/images/svg/download.svg';
 import sendIcon from '/src/assets/images/svg/send.svg';
 import chatBubbleIcon from '/src/assets/images/svg/chat_bubble.svg';
@@ -17,6 +19,8 @@ const icons = {
     mail: mailIcon,
     add: addIcon,
     arrow_right: arrowRightIcon,
+    arrow_back: arrowBackIcon,
+    arrow_forward: arrowForwardIcon,
     download: downloadIcon,
     send: sendIcon,
     chat_bubble: chatBubbleIcon,
