@@ -12,11 +12,13 @@ class AppSkill extends HTMLElement {
         <div class="d-flex flex-column gap-3">
             <h2 class="m-0">Compétences</h2>
             ${data.map(item => `
-                <div class="category-skills d-flex flex-column gap-2 p-2">
+                <div class="category-skills container-resume d-flex flex-column gap-2 p-2">
                     <p class="m-0"><strong>${item.title}</strong></p>
                     <div class="d-flex flex-row flex-wrap gap-2">
                         ${item.skills.map(skill => `
-                            <p class="element-skills m-0">${skill}</p>
+                            <div class="element-skills">
+                                <p class="m-0">${skill}</p>
+                            </div>
                         `).join('')}
                     </div>
                 </div>

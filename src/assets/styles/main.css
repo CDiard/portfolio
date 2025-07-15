@@ -106,11 +106,24 @@ hr {
     }
 }
 
-.date-resume {
-    height: min-content;
-    text-align: center;
-    text-wrap: nowrap;
-    white-space: nowrap;
-    padding: 0 8px;
+.container-resume {
+    padding: 8px;
+    border-radius: 8px;
     border: 2px solid var(--secondary-color-portfolio);
+    background: color-mix(in srgb, var(--dark-color-portfolio) 80%, transparent);
+    backdrop-filter: blur(10px);
+
+    .date-resume {
+        height: min-content;
+        text-align: center;
+        text-wrap: nowrap;
+        white-space: nowrap;
+        padding: 2px 12px;
+        border: 1.5px solid var(--secondary-color-portfolio);
+        border-radius: 24px;
+    }
+
+    .text-resume {
+        line-height: 1.5rem;
+    }
 }

@@ -11,11 +11,11 @@ class AppTraining extends HTMLElement {
         this.innerHTML = `
         <div class="d-flex flex-column gap-3">
             <h2 class="m-0">Formations</h2>
-            <div class="d-flex flex-column gap-2">
+            <div class="container-resume d-flex flex-column gap-2">
                 ${data.map(item => `
                     <div class="d-flex flex-row gap-3">
                         <p class="date-resume m-0"><strong>${item.date}</strong></p>
-                        <p class="m-0">${item.training}</p>
+                        <p class="text-resume m-0">${item.training}</p>
                     </div>
                 `).join('')}
             </div>
