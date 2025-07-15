@@ -26,12 +26,14 @@ class AppContact extends HTMLElement {
 
                 if (!input.value.trim()) {
                     errorField.textContent = "Ce champ est requis.";
+                    errorField.classList.add("mt-2");
                     hasError = true;
                     continue;
                 }
 
                 if (name === "email" && !/^\S+@\S+\.\S+$/.test(input.value)) {
-                    errorField.textContent = "Email invalide.";
+                    errorField.textContent = "Adresse e-mail invalide.";
+                    errorField.classList.add("mt-2");
                     hasError = true;
                 }
             }
@@ -44,14 +46,19 @@ class AppContact extends HTMLElement {
                     body: formData
                 });
 
+                if (res.status > 200) {
+                    throw new Error(await res.text());
+                }
+
                 responseMessage.textContent = await res.text();
+                responseMessage.classList.add("d-inline");
 
                 if (res.ok) {
                     form.reset(); // vider le formulaire
                 }
             } catch (err) {
                 responseMessage.textContent = "Une erreur est survenue lors de l'envoi.";
-                responseMessage.style.color = "red";
+                responseMessage.classList.add("d-inline");
             }
         });
     }

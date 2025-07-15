@@ -1,5 +1,6 @@
 .form-label {
-    color: var(--primary-color-portfolio);
+    margin: 0 0 4px 0;
+    color: var(--text-color-portfolio);
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.25rem;
@@ -7,29 +8,32 @@
 
 .form-control {
     height: 28px;
-    padding: 4px 8px;
-    color: var(--primary-color-portfolio);
+    padding: 4px 14px;
+    color: var(--text-color-portfolio);
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.25rem;
-    background-color: transparent;
+    background-color: color-mix(in srgb, var(--primary-color-portfolio) 15%, transparent);
     border: 1px solid var(--primary-color-portfolio);
-    border-radius: 0;
+    border-radius: 28px;
     opacity: 1;
+    transition: all 200ms ease-in-out;
 
     &.form-textarea {
         height: 84px;
+        border-radius: 14px;
         resize: none;
     }
     &::placeholder {
-        color: var(--primary-color-portfolio);
+        color: var(--text-color-portfolio);
         opacity: 0.6;
     }
     &:focus {
-        color: var(--primary-color-portfolio);
-        background-color: transparent;
+        color: var(--text-color-portfolio);
+        background-color: color-mix(in srgb, var(--primary-color-portfolio) 30%, transparent);
         border: 1px solid var(--primary-color-portfolio);
         outline: none;
+        box-shadow: none;
         opacity: 1;
     }
 }

@@ -1,0 +1,20 @@
+.links-contact {
+    svg {
+        fill: var(--secondary-color-portfolio);
+    }
+}
+
+.form-contact {
+    border-radius: 16px;
+    border: 2px solid var(--secondary-color-portfolio);
+    background: color-mix(in srgb, var(--dark-color-portfolio) 80%, transparent);
+    backdrop-filter: blur(10px);
+
+    .error-message {
+        margin: 0;
+    }
+
+    #responseMessage {
+        display: none;
+    }
+}
