@@ -46,7 +46,7 @@ class AppSwiper extends HTMLElement {
             </div>
         </div>
 
-        <div class="modal fade" id="slideModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-swiper modal fade" id="slideModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
