@@ -1,12 +1,34 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
+const siteUrl = 'https://corentindiard.fr';
+
+const paths = [
+    { path: '/', changefreq: 'daily', priority: 1.0 }
+];
 
 module.exports = {
     entry: './src/index.js',
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            scriptLoading: 'defer',
+            inject: 'body',
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyCSS: true,
+                minifyJS: true
+            }
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -14,7 +36,8 @@ module.exports = {
                 { from: 'src/assets/fonts', to: 'fonts', noErrorOnMissing: true },
                 { from: 'src/assets/documents', to: 'documents', noErrorOnMissing: true }
             ]
-        })
+        }),
+        new SitemapPlugin({ base: siteUrl, paths })
     ],
     output: {
         filename: '[name].[contenthash].js',
@@ -26,6 +49,17 @@ module.exports = {
         moduleIds: 'deterministic',
         runtimeChunk: 'single',
         minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    compress: {
+                        drop_console: true,
+                        drop_debugger: true
+                    }
+                }
+            }),
+            new CssMinimizerPlugin()
+        ],
         splitChunks: {
             cacheGroups: {
                 vendor: {
