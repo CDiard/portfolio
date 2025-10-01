@@ -52,6 +52,7 @@
         border: 2px solid var(--primary-color-portfolio);
         border-radius: 32px;
         transition: all 300ms ease-in;
+        z-index: 1;
 
         &:hover {
             background-color: transparent;
